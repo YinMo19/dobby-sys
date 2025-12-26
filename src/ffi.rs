@@ -81,9 +81,479 @@ pub const WINT_MIN: i32 = -2147483648;
 pub const WINT_MAX: u32 = 2147483647;
 pub const SIG_ATOMIC_MIN: i32 = -2147483648;
 pub const SIG_ATOMIC_MAX: u32 = 2147483647;
+pub const _QUAD_HIGHWORD: u32 = 1;
+pub const _QUAD_LOWWORD: u32 = 0;
+pub const __DARWIN_LITTLE_ENDIAN: u32 = 1234;
+pub const __DARWIN_BIG_ENDIAN: u32 = 4321;
+pub const __DARWIN_PDP_ENDIAN: u32 = 3412;
+pub const LITTLE_ENDIAN: u32 = 1234;
+pub const BIG_ENDIAN: u32 = 4321;
+pub const PDP_ENDIAN: u32 = 3412;
+pub const __DARWIN_BYTE_ORDER: u32 = 1234;
+pub const BYTE_ORDER: u32 = 1234;
+pub const USE_CLANG_STDDEF: u32 = 0;
+pub const __API_TO_BE_DEPRECATED: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_MACOS: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_MACOSAPPLICATIONEXTENSION: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_IOS: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_IOSAPPLICATIONEXTENSION: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_MACCATALYST: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_MACCATALYSTAPPLICATIONEXTENSION: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_WATCHOS: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_WATCHOSAPPLICATIONEXTENSION: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_TVOS: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_TVOSAPPLICATIONEXTENSION: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_DRIVERKIT: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_VISIONOS: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_VISIONOSAPPLICATIONEXTENSION: u32 = 100000;
+pub const __API_TO_BE_DEPRECATED_KERNELKIT: u32 = 100000;
+pub const __MAC_10_0: u32 = 1000;
+pub const __MAC_10_1: u32 = 1010;
+pub const __MAC_10_2: u32 = 1020;
+pub const __MAC_10_3: u32 = 1030;
+pub const __MAC_10_4: u32 = 1040;
+pub const __MAC_10_5: u32 = 1050;
+pub const __MAC_10_6: u32 = 1060;
+pub const __MAC_10_7: u32 = 1070;
+pub const __MAC_10_8: u32 = 1080;
+pub const __MAC_10_9: u32 = 1090;
+pub const __MAC_10_10: u32 = 101000;
+pub const __MAC_10_10_2: u32 = 101002;
+pub const __MAC_10_10_3: u32 = 101003;
+pub const __MAC_10_11: u32 = 101100;
+pub const __MAC_10_11_2: u32 = 101102;
+pub const __MAC_10_11_3: u32 = 101103;
+pub const __MAC_10_11_4: u32 = 101104;
+pub const __MAC_10_12: u32 = 101200;
+pub const __MAC_10_12_1: u32 = 101201;
+pub const __MAC_10_12_2: u32 = 101202;
+pub const __MAC_10_12_4: u32 = 101204;
+pub const __MAC_10_13: u32 = 101300;
+pub const __MAC_10_13_1: u32 = 101301;
+pub const __MAC_10_13_2: u32 = 101302;
+pub const __MAC_10_13_4: u32 = 101304;
+pub const __MAC_10_14: u32 = 101400;
+pub const __MAC_10_14_1: u32 = 101401;
+pub const __MAC_10_14_4: u32 = 101404;
+pub const __MAC_10_14_5: u32 = 101405;
+pub const __MAC_10_14_6: u32 = 101406;
+pub const __MAC_10_15: u32 = 101500;
+pub const __MAC_10_15_1: u32 = 101501;
+pub const __MAC_10_15_4: u32 = 101504;
+pub const __MAC_10_16: u32 = 101600;
+pub const __MAC_11_0: u32 = 110000;
+pub const __MAC_11_1: u32 = 110100;
+pub const __MAC_11_3: u32 = 110300;
+pub const __MAC_11_4: u32 = 110400;
+pub const __MAC_11_5: u32 = 110500;
+pub const __MAC_11_6: u32 = 110600;
+pub const __MAC_12_0: u32 = 120000;
+pub const __MAC_12_1: u32 = 120100;
+pub const __MAC_12_2: u32 = 120200;
+pub const __MAC_12_3: u32 = 120300;
+pub const __MAC_12_4: u32 = 120400;
+pub const __MAC_12_5: u32 = 120500;
+pub const __MAC_12_6: u32 = 120600;
+pub const __MAC_12_7: u32 = 120700;
+pub const __MAC_13_0: u32 = 130000;
+pub const __MAC_13_1: u32 = 130100;
+pub const __MAC_13_2: u32 = 130200;
+pub const __MAC_13_3: u32 = 130300;
+pub const __MAC_13_4: u32 = 130400;
+pub const __MAC_13_5: u32 = 130500;
+pub const __MAC_13_6: u32 = 130600;
+pub const __MAC_13_7: u32 = 130700;
+pub const __MAC_14_0: u32 = 140000;
+pub const __MAC_14_1: u32 = 140100;
+pub const __MAC_14_2: u32 = 140200;
+pub const __MAC_14_3: u32 = 140300;
+pub const __MAC_14_4: u32 = 140400;
+pub const __MAC_14_5: u32 = 140500;
+pub const __MAC_14_6: u32 = 140600;
+pub const __MAC_14_7: u32 = 140700;
+pub const __MAC_15_0: u32 = 150000;
+pub const __MAC_15_1: u32 = 150100;
+pub const __MAC_15_2: u32 = 150200;
+pub const __MAC_15_3: u32 = 150300;
+pub const __MAC_15_4: u32 = 150400;
+pub const __MAC_15_5: u32 = 150500;
+pub const __MAC_15_6: u32 = 150600;
+pub const __MAC_16_0: u32 = 160000;
+pub const __MAC_26_0: u32 = 260000;
+pub const __MAC_26_1: u32 = 260100;
+pub const __MAC_26_2: u32 = 260200;
+pub const __IPHONE_2_0: u32 = 20000;
+pub const __IPHONE_2_1: u32 = 20100;
+pub const __IPHONE_2_2: u32 = 20200;
+pub const __IPHONE_3_0: u32 = 30000;
+pub const __IPHONE_3_1: u32 = 30100;
+pub const __IPHONE_3_2: u32 = 30200;
+pub const __IPHONE_4_0: u32 = 40000;
+pub const __IPHONE_4_1: u32 = 40100;
+pub const __IPHONE_4_2: u32 = 40200;
+pub const __IPHONE_4_3: u32 = 40300;
+pub const __IPHONE_5_0: u32 = 50000;
+pub const __IPHONE_5_1: u32 = 50100;
+pub const __IPHONE_6_0: u32 = 60000;
+pub const __IPHONE_6_1: u32 = 60100;
+pub const __IPHONE_7_0: u32 = 70000;
+pub const __IPHONE_7_1: u32 = 70100;
+pub const __IPHONE_8_0: u32 = 80000;
+pub const __IPHONE_8_1: u32 = 80100;
+pub const __IPHONE_8_2: u32 = 80200;
+pub const __IPHONE_8_3: u32 = 80300;
+pub const __IPHONE_8_4: u32 = 80400;
+pub const __IPHONE_9_0: u32 = 90000;
+pub const __IPHONE_9_1: u32 = 90100;
+pub const __IPHONE_9_2: u32 = 90200;
+pub const __IPHONE_9_3: u32 = 90300;
+pub const __IPHONE_10_0: u32 = 100000;
+pub const __IPHONE_10_1: u32 = 100100;
+pub const __IPHONE_10_2: u32 = 100200;
+pub const __IPHONE_10_3: u32 = 100300;
+pub const __IPHONE_11_0: u32 = 110000;
+pub const __IPHONE_11_1: u32 = 110100;
+pub const __IPHONE_11_2: u32 = 110200;
+pub const __IPHONE_11_3: u32 = 110300;
+pub const __IPHONE_11_4: u32 = 110400;
+pub const __IPHONE_12_0: u32 = 120000;
+pub const __IPHONE_12_1: u32 = 120100;
+pub const __IPHONE_12_2: u32 = 120200;
+pub const __IPHONE_12_3: u32 = 120300;
+pub const __IPHONE_12_4: u32 = 120400;
+pub const __IPHONE_13_0: u32 = 130000;
+pub const __IPHONE_13_1: u32 = 130100;
+pub const __IPHONE_13_2: u32 = 130200;
+pub const __IPHONE_13_3: u32 = 130300;
+pub const __IPHONE_13_4: u32 = 130400;
+pub const __IPHONE_13_5: u32 = 130500;
+pub const __IPHONE_13_6: u32 = 130600;
+pub const __IPHONE_13_7: u32 = 130700;
+pub const __IPHONE_14_0: u32 = 140000;
+pub const __IPHONE_14_1: u32 = 140100;
+pub const __IPHONE_14_2: u32 = 140200;
+pub const __IPHONE_14_3: u32 = 140300;
+pub const __IPHONE_14_5: u32 = 140500;
+pub const __IPHONE_14_6: u32 = 140600;
+pub const __IPHONE_14_7: u32 = 140700;
+pub const __IPHONE_14_8: u32 = 140800;
+pub const __IPHONE_15_0: u32 = 150000;
+pub const __IPHONE_15_1: u32 = 150100;
+pub const __IPHONE_15_2: u32 = 150200;
+pub const __IPHONE_15_3: u32 = 150300;
+pub const __IPHONE_15_4: u32 = 150400;
+pub const __IPHONE_15_5: u32 = 150500;
+pub const __IPHONE_15_6: u32 = 150600;
+pub const __IPHONE_15_7: u32 = 150700;
+pub const __IPHONE_15_8: u32 = 150800;
+pub const __IPHONE_16_0: u32 = 160000;
+pub const __IPHONE_16_1: u32 = 160100;
+pub const __IPHONE_16_2: u32 = 160200;
+pub const __IPHONE_16_3: u32 = 160300;
+pub const __IPHONE_16_4: u32 = 160400;
+pub const __IPHONE_16_5: u32 = 160500;
+pub const __IPHONE_16_6: u32 = 160600;
+pub const __IPHONE_16_7: u32 = 160700;
+pub const __IPHONE_17_0: u32 = 170000;
+pub const __IPHONE_17_1: u32 = 170100;
+pub const __IPHONE_17_2: u32 = 170200;
+pub const __IPHONE_17_3: u32 = 170300;
+pub const __IPHONE_17_4: u32 = 170400;
+pub const __IPHONE_17_5: u32 = 170500;
+pub const __IPHONE_17_6: u32 = 170600;
+pub const __IPHONE_17_7: u32 = 170700;
+pub const __IPHONE_18_0: u32 = 180000;
+pub const __IPHONE_18_1: u32 = 180100;
+pub const __IPHONE_18_2: u32 = 180200;
+pub const __IPHONE_18_3: u32 = 180300;
+pub const __IPHONE_18_4: u32 = 180400;
+pub const __IPHONE_18_5: u32 = 180500;
+pub const __IPHONE_18_6: u32 = 180600;
+pub const __IPHONE_19_0: u32 = 190000;
+pub const __IPHONE_26_0: u32 = 260000;
+pub const __IPHONE_26_1: u32 = 260100;
+pub const __IPHONE_26_2: u32 = 260200;
+pub const __WATCHOS_1_0: u32 = 10000;
+pub const __WATCHOS_2_0: u32 = 20000;
+pub const __WATCHOS_2_1: u32 = 20100;
+pub const __WATCHOS_2_2: u32 = 20200;
+pub const __WATCHOS_3_0: u32 = 30000;
+pub const __WATCHOS_3_1: u32 = 30100;
+pub const __WATCHOS_3_1_1: u32 = 30101;
+pub const __WATCHOS_3_2: u32 = 30200;
+pub const __WATCHOS_4_0: u32 = 40000;
+pub const __WATCHOS_4_1: u32 = 40100;
+pub const __WATCHOS_4_2: u32 = 40200;
+pub const __WATCHOS_4_3: u32 = 40300;
+pub const __WATCHOS_5_0: u32 = 50000;
+pub const __WATCHOS_5_1: u32 = 50100;
+pub const __WATCHOS_5_2: u32 = 50200;
+pub const __WATCHOS_5_3: u32 = 50300;
+pub const __WATCHOS_6_0: u32 = 60000;
+pub const __WATCHOS_6_1: u32 = 60100;
+pub const __WATCHOS_6_2: u32 = 60200;
+pub const __WATCHOS_7_0: u32 = 70000;
+pub const __WATCHOS_7_1: u32 = 70100;
+pub const __WATCHOS_7_2: u32 = 70200;
+pub const __WATCHOS_7_3: u32 = 70300;
+pub const __WATCHOS_7_4: u32 = 70400;
+pub const __WATCHOS_7_5: u32 = 70500;
+pub const __WATCHOS_7_6: u32 = 70600;
+pub const __WATCHOS_8_0: u32 = 80000;
+pub const __WATCHOS_8_1: u32 = 80100;
+pub const __WATCHOS_8_3: u32 = 80300;
+pub const __WATCHOS_8_4: u32 = 80400;
+pub const __WATCHOS_8_5: u32 = 80500;
+pub const __WATCHOS_8_6: u32 = 80600;
+pub const __WATCHOS_8_7: u32 = 80700;
+pub const __WATCHOS_8_8: u32 = 80800;
+pub const __WATCHOS_9_0: u32 = 90000;
+pub const __WATCHOS_9_1: u32 = 90100;
+pub const __WATCHOS_9_2: u32 = 90200;
+pub const __WATCHOS_9_3: u32 = 90300;
+pub const __WATCHOS_9_4: u32 = 90400;
+pub const __WATCHOS_9_5: u32 = 90500;
+pub const __WATCHOS_9_6: u32 = 90600;
+pub const __WATCHOS_10_0: u32 = 100000;
+pub const __WATCHOS_10_1: u32 = 100100;
+pub const __WATCHOS_10_2: u32 = 100200;
+pub const __WATCHOS_10_3: u32 = 100300;
+pub const __WATCHOS_10_4: u32 = 100400;
+pub const __WATCHOS_10_5: u32 = 100500;
+pub const __WATCHOS_10_6: u32 = 100600;
+pub const __WATCHOS_10_7: u32 = 100700;
+pub const __WATCHOS_11_0: u32 = 110000;
+pub const __WATCHOS_11_1: u32 = 110100;
+pub const __WATCHOS_11_2: u32 = 110200;
+pub const __WATCHOS_11_3: u32 = 110300;
+pub const __WATCHOS_11_4: u32 = 110400;
+pub const __WATCHOS_11_5: u32 = 110500;
+pub const __WATCHOS_11_6: u32 = 110600;
+pub const __WATCHOS_12_0: u32 = 120000;
+pub const __WATCHOS_26_0: u32 = 260000;
+pub const __WATCHOS_26_1: u32 = 260100;
+pub const __WATCHOS_26_2: u32 = 260200;
+pub const __TVOS_9_0: u32 = 90000;
+pub const __TVOS_9_1: u32 = 90100;
+pub const __TVOS_9_2: u32 = 90200;
+pub const __TVOS_10_0: u32 = 100000;
+pub const __TVOS_10_0_1: u32 = 100001;
+pub const __TVOS_10_1: u32 = 100100;
+pub const __TVOS_10_2: u32 = 100200;
+pub const __TVOS_11_0: u32 = 110000;
+pub const __TVOS_11_1: u32 = 110100;
+pub const __TVOS_11_2: u32 = 110200;
+pub const __TVOS_11_3: u32 = 110300;
+pub const __TVOS_11_4: u32 = 110400;
+pub const __TVOS_12_0: u32 = 120000;
+pub const __TVOS_12_1: u32 = 120100;
+pub const __TVOS_12_2: u32 = 120200;
+pub const __TVOS_12_3: u32 = 120300;
+pub const __TVOS_12_4: u32 = 120400;
+pub const __TVOS_13_0: u32 = 130000;
+pub const __TVOS_13_2: u32 = 130200;
+pub const __TVOS_13_3: u32 = 130300;
+pub const __TVOS_13_4: u32 = 130400;
+pub const __TVOS_14_0: u32 = 140000;
+pub const __TVOS_14_1: u32 = 140100;
+pub const __TVOS_14_2: u32 = 140200;
+pub const __TVOS_14_3: u32 = 140300;
+pub const __TVOS_14_5: u32 = 140500;
+pub const __TVOS_14_6: u32 = 140600;
+pub const __TVOS_14_7: u32 = 140700;
+pub const __TVOS_15_0: u32 = 150000;
+pub const __TVOS_15_1: u32 = 150100;
+pub const __TVOS_15_2: u32 = 150200;
+pub const __TVOS_15_3: u32 = 150300;
+pub const __TVOS_15_4: u32 = 150400;
+pub const __TVOS_15_5: u32 = 150500;
+pub const __TVOS_15_6: u32 = 150600;
+pub const __TVOS_16_0: u32 = 160000;
+pub const __TVOS_16_1: u32 = 160100;
+pub const __TVOS_16_2: u32 = 160200;
+pub const __TVOS_16_3: u32 = 160300;
+pub const __TVOS_16_4: u32 = 160400;
+pub const __TVOS_16_5: u32 = 160500;
+pub const __TVOS_16_6: u32 = 160600;
+pub const __TVOS_17_0: u32 = 170000;
+pub const __TVOS_17_1: u32 = 170100;
+pub const __TVOS_17_2: u32 = 170200;
+pub const __TVOS_17_3: u32 = 170300;
+pub const __TVOS_17_4: u32 = 170400;
+pub const __TVOS_17_5: u32 = 170500;
+pub const __TVOS_17_6: u32 = 170600;
+pub const __TVOS_18_0: u32 = 180000;
+pub const __TVOS_18_1: u32 = 180100;
+pub const __TVOS_18_2: u32 = 180200;
+pub const __TVOS_18_3: u32 = 180300;
+pub const __TVOS_18_4: u32 = 180400;
+pub const __TVOS_18_5: u32 = 180500;
+pub const __TVOS_18_6: u32 = 180600;
+pub const __TVOS_19_0: u32 = 190000;
+pub const __TVOS_26_0: u32 = 260000;
+pub const __TVOS_26_1: u32 = 260100;
+pub const __TVOS_26_2: u32 = 260200;
+pub const __BRIDGEOS_2_0: u32 = 20000;
+pub const __BRIDGEOS_3_0: u32 = 30000;
+pub const __BRIDGEOS_3_1: u32 = 30100;
+pub const __BRIDGEOS_3_4: u32 = 30400;
+pub const __BRIDGEOS_4_0: u32 = 40000;
+pub const __BRIDGEOS_4_1: u32 = 40100;
+pub const __BRIDGEOS_5_0: u32 = 50000;
+pub const __BRIDGEOS_5_1: u32 = 50100;
+pub const __BRIDGEOS_5_3: u32 = 50300;
+pub const __BRIDGEOS_6_0: u32 = 60000;
+pub const __BRIDGEOS_6_2: u32 = 60200;
+pub const __BRIDGEOS_6_4: u32 = 60400;
+pub const __BRIDGEOS_6_5: u32 = 60500;
+pub const __BRIDGEOS_6_6: u32 = 60600;
+pub const __BRIDGEOS_7_0: u32 = 70000;
+pub const __BRIDGEOS_7_1: u32 = 70100;
+pub const __BRIDGEOS_7_2: u32 = 70200;
+pub const __BRIDGEOS_7_3: u32 = 70300;
+pub const __BRIDGEOS_7_4: u32 = 70400;
+pub const __BRIDGEOS_7_6: u32 = 70600;
+pub const __BRIDGEOS_8_0: u32 = 80000;
+pub const __BRIDGEOS_8_1: u32 = 80100;
+pub const __BRIDGEOS_8_2: u32 = 80200;
+pub const __BRIDGEOS_8_3: u32 = 80300;
+pub const __BRIDGEOS_8_4: u32 = 80400;
+pub const __BRIDGEOS_8_5: u32 = 80500;
+pub const __BRIDGEOS_8_6: u32 = 80600;
+pub const __BRIDGEOS_9_0: u32 = 90000;
+pub const __BRIDGEOS_9_1: u32 = 90100;
+pub const __BRIDGEOS_9_2: u32 = 90200;
+pub const __BRIDGEOS_9_3: u32 = 90300;
+pub const __BRIDGEOS_9_4: u32 = 90400;
+pub const __BRIDGEOS_9_5: u32 = 90500;
+pub const __BRIDGEOS_9_6: u32 = 90600;
+pub const __BRIDGEOS_10_0: u32 = 100000;
+pub const __BRIDGEOS_10_1: u32 = 100100;
+pub const __BRIDGEOS_10_2: u32 = 100200;
+pub const __DRIVERKIT_19_0: u32 = 190000;
+pub const __DRIVERKIT_20_0: u32 = 200000;
+pub const __DRIVERKIT_21_0: u32 = 210000;
+pub const __DRIVERKIT_22_0: u32 = 220000;
+pub const __DRIVERKIT_22_4: u32 = 220400;
+pub const __DRIVERKIT_22_5: u32 = 220500;
+pub const __DRIVERKIT_22_6: u32 = 220600;
+pub const __DRIVERKIT_23_0: u32 = 230000;
+pub const __DRIVERKIT_23_1: u32 = 230100;
+pub const __DRIVERKIT_23_2: u32 = 230200;
+pub const __DRIVERKIT_23_3: u32 = 230300;
+pub const __DRIVERKIT_23_4: u32 = 230400;
+pub const __DRIVERKIT_23_5: u32 = 230500;
+pub const __DRIVERKIT_23_6: u32 = 230600;
+pub const __DRIVERKIT_24_0: u32 = 240000;
+pub const __DRIVERKIT_24_1: u32 = 240100;
+pub const __DRIVERKIT_24_2: u32 = 240200;
+pub const __DRIVERKIT_24_3: u32 = 240300;
+pub const __DRIVERKIT_24_4: u32 = 240400;
+pub const __DRIVERKIT_24_5: u32 = 240500;
+pub const __DRIVERKIT_24_6: u32 = 240600;
+pub const __DRIVERKIT_25_0: u32 = 250000;
+pub const __DRIVERKIT_25_1: u32 = 250100;
+pub const __DRIVERKIT_25_2: u32 = 250200;
+pub const __VISIONOS_1_0: u32 = 10000;
+pub const __VISIONOS_1_1: u32 = 10100;
+pub const __VISIONOS_1_2: u32 = 10200;
+pub const __VISIONOS_1_3: u32 = 10300;
+pub const __VISIONOS_2_0: u32 = 20000;
+pub const __VISIONOS_2_1: u32 = 20100;
+pub const __VISIONOS_2_2: u32 = 20200;
+pub const __VISIONOS_2_3: u32 = 20300;
+pub const __VISIONOS_2_4: u32 = 20400;
+pub const __VISIONOS_2_5: u32 = 20500;
+pub const __VISIONOS_2_6: u32 = 20600;
+pub const __VISIONOS_3_0: u32 = 30000;
+pub const __VISIONOS_26_0: u32 = 260000;
+pub const __VISIONOS_26_1: u32 = 260100;
+pub const __VISIONOS_26_2: u32 = 260200;
+pub const MAC_OS_X_VERSION_10_0: u32 = 1000;
+pub const MAC_OS_X_VERSION_10_1: u32 = 1010;
+pub const MAC_OS_X_VERSION_10_2: u32 = 1020;
+pub const MAC_OS_X_VERSION_10_3: u32 = 1030;
+pub const MAC_OS_X_VERSION_10_4: u32 = 1040;
+pub const MAC_OS_X_VERSION_10_5: u32 = 1050;
+pub const MAC_OS_X_VERSION_10_6: u32 = 1060;
+pub const MAC_OS_X_VERSION_10_7: u32 = 1070;
+pub const MAC_OS_X_VERSION_10_8: u32 = 1080;
+pub const MAC_OS_X_VERSION_10_9: u32 = 1090;
+pub const MAC_OS_X_VERSION_10_10: u32 = 101000;
+pub const MAC_OS_X_VERSION_10_10_2: u32 = 101002;
+pub const MAC_OS_X_VERSION_10_10_3: u32 = 101003;
+pub const MAC_OS_X_VERSION_10_11: u32 = 101100;
+pub const MAC_OS_X_VERSION_10_11_2: u32 = 101102;
+pub const MAC_OS_X_VERSION_10_11_3: u32 = 101103;
+pub const MAC_OS_X_VERSION_10_11_4: u32 = 101104;
+pub const MAC_OS_X_VERSION_10_12: u32 = 101200;
+pub const MAC_OS_X_VERSION_10_12_1: u32 = 101201;
+pub const MAC_OS_X_VERSION_10_12_2: u32 = 101202;
+pub const MAC_OS_X_VERSION_10_12_4: u32 = 101204;
+pub const MAC_OS_X_VERSION_10_13: u32 = 101300;
+pub const MAC_OS_X_VERSION_10_13_1: u32 = 101301;
+pub const MAC_OS_X_VERSION_10_13_2: u32 = 101302;
+pub const MAC_OS_X_VERSION_10_13_4: u32 = 101304;
+pub const MAC_OS_X_VERSION_10_14: u32 = 101400;
+pub const MAC_OS_X_VERSION_10_14_1: u32 = 101401;
+pub const MAC_OS_X_VERSION_10_14_4: u32 = 101404;
+pub const MAC_OS_X_VERSION_10_14_5: u32 = 101405;
+pub const MAC_OS_X_VERSION_10_14_6: u32 = 101406;
+pub const MAC_OS_X_VERSION_10_15: u32 = 101500;
+pub const MAC_OS_X_VERSION_10_15_1: u32 = 101501;
+pub const MAC_OS_X_VERSION_10_15_4: u32 = 101504;
+pub const MAC_OS_X_VERSION_10_16: u32 = 101600;
+pub const MAC_OS_VERSION_11_0: u32 = 110000;
+pub const MAC_OS_VERSION_11_1: u32 = 110100;
+pub const MAC_OS_VERSION_11_3: u32 = 110300;
+pub const MAC_OS_VERSION_11_4: u32 = 110400;
+pub const MAC_OS_VERSION_11_5: u32 = 110500;
+pub const MAC_OS_VERSION_11_6: u32 = 110600;
+pub const MAC_OS_VERSION_12_0: u32 = 120000;
+pub const MAC_OS_VERSION_12_1: u32 = 120100;
+pub const MAC_OS_VERSION_12_2: u32 = 120200;
+pub const MAC_OS_VERSION_12_3: u32 = 120300;
+pub const MAC_OS_VERSION_12_4: u32 = 120400;
+pub const MAC_OS_VERSION_12_5: u32 = 120500;
+pub const MAC_OS_VERSION_12_6: u32 = 120600;
+pub const MAC_OS_VERSION_12_7: u32 = 120700;
+pub const MAC_OS_VERSION_13_0: u32 = 130000;
+pub const MAC_OS_VERSION_13_1: u32 = 130100;
+pub const MAC_OS_VERSION_13_2: u32 = 130200;
+pub const MAC_OS_VERSION_13_3: u32 = 130300;
+pub const MAC_OS_VERSION_13_4: u32 = 130400;
+pub const MAC_OS_VERSION_13_5: u32 = 130500;
+pub const MAC_OS_VERSION_13_6: u32 = 130600;
+pub const MAC_OS_VERSION_13_7: u32 = 130700;
+pub const MAC_OS_VERSION_14_0: u32 = 140000;
+pub const MAC_OS_VERSION_14_1: u32 = 140100;
+pub const MAC_OS_VERSION_14_2: u32 = 140200;
+pub const MAC_OS_VERSION_14_3: u32 = 140300;
+pub const MAC_OS_VERSION_14_4: u32 = 140400;
+pub const MAC_OS_VERSION_14_5: u32 = 140500;
+pub const MAC_OS_VERSION_14_6: u32 = 140600;
+pub const MAC_OS_VERSION_14_7: u32 = 140700;
+pub const MAC_OS_VERSION_15_0: u32 = 150000;
+pub const MAC_OS_VERSION_15_1: u32 = 150100;
+pub const MAC_OS_VERSION_15_2: u32 = 150200;
+pub const MAC_OS_VERSION_15_3: u32 = 150300;
+pub const MAC_OS_VERSION_15_4: u32 = 150400;
+pub const MAC_OS_VERSION_15_5: u32 = 150500;
+pub const MAC_OS_VERSION_15_6: u32 = 150600;
+pub const MAC_OS_VERSION_16_0: u32 = 160000;
+pub const MAC_OS_VERSION_26_0: u32 = 260000;
+pub const MAC_OS_VERSION_26_1: u32 = 260100;
+pub const MAC_OS_VERSION_26_2: u32 = 260200;
+pub const __AVAILABILITY_VERSIONS_VERSION_HASH: u32 = 93585900;
+pub const __AVAILABILITY_VERSIONS_VERSION_STRING: &[u8; 6] = b"Local\0";
+pub const __AVAILABILITY_FILE: &[u8; 23] = b"AvailabilityVersions.h\0";
+pub const __MAC_OS_X_VERSION_MAX_ALLOWED: u32 = 260200;
+pub const __ENABLE_LEGACY_MAC_AVAILABILITY: u32 = 1;
+pub const __DARWIN_FD_SETSIZE: u32 = 1024;
+pub const __DARWIN_NBBY: u32 = 8;
+pub const NBBY: u32 = 8;
+pub const FD_SETSIZE: u32 = 1024;
 pub const ARM64_TMP_REG_NDX_0: u32 = 17;
-pub const RT_FAILED: i32 = -1;
-pub const RT_SUCCESS: u32 = 0;
 pub type int_least8_t = i8;
 pub type int_least16_t = i16;
 pub type int_least32_t = i32;
@@ -339,31 +809,89 @@ pub type __darwin_pthread_rwlockattr_t = _opaque_pthread_rwlockattr_t;
 pub type __darwin_pthread_t = *mut _opaque_pthread_t;
 pub type intmax_t = ::std::os::raw::c_long;
 pub type uintmax_t = ::std::os::raw::c_ulong;
-unsafe extern "C" {
-    pub fn log_set_level(level: ::std::os::raw::c_int);
+pub type u_int8_t = ::std::os::raw::c_uchar;
+pub type u_int16_t = ::std::os::raw::c_ushort;
+pub type u_int32_t = ::std::os::raw::c_uint;
+pub type u_int64_t = ::std::os::raw::c_ulonglong;
+pub type register_t = i64;
+pub type user_addr_t = u_int64_t;
+pub type user_size_t = u_int64_t;
+pub type user_ssize_t = i64;
+pub type user_long_t = i64;
+pub type user_ulong_t = u_int64_t;
+pub type user_time_t = i64;
+pub type user_off_t = i64;
+pub type syscall_arg_t = u_int64_t;
+pub type u_char = ::std::os::raw::c_uchar;
+pub type u_short = ::std::os::raw::c_ushort;
+pub type u_int = ::std::os::raw::c_uint;
+pub type u_long = ::std::os::raw::c_ulong;
+pub type ushort = ::std::os::raw::c_ushort;
+pub type uint = ::std::os::raw::c_uint;
+pub type u_quad_t = u_int64_t;
+pub type quad_t = i64;
+pub type qaddr_t = *mut quad_t;
+pub type caddr_t = *mut ::std::os::raw::c_char;
+pub type daddr_t = i32;
+pub type dev_t = __darwin_dev_t;
+pub type fixpt_t = u_int32_t;
+pub type blkcnt_t = __darwin_blkcnt_t;
+pub type blksize_t = __darwin_blksize_t;
+pub type gid_t = __darwin_gid_t;
+pub type in_addr_t = __uint32_t;
+pub type in_port_t = __uint16_t;
+pub type ino_t = __darwin_ino_t;
+pub type ino64_t = __darwin_ino64_t;
+pub type key_t = __int32_t;
+pub type mode_t = __darwin_mode_t;
+pub type nlink_t = __uint16_t;
+pub type id_t = __darwin_id_t;
+pub type pid_t = __darwin_pid_t;
+pub type off_t = __darwin_off_t;
+pub type segsz_t = i32;
+pub type swblk_t = i32;
+pub type uid_t = __darwin_uid_t;
+pub type clock_t = __darwin_clock_t;
+pub type time_t = __darwin_time_t;
+pub type useconds_t = __darwin_useconds_t;
+pub type suseconds_t = __darwin_suseconds_t;
+pub type rsize_t = __darwin_size_t;
+pub type errno_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct fd_set {
+    pub fds_bits: [__int32_t; 32usize],
 }
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of fd_set"][::std::mem::size_of::<fd_set>() - 128usize];
+    ["Alignment of fd_set"][::std::mem::align_of::<fd_set>() - 4usize];
+    ["Offset of field: fd_set::fds_bits"][::std::mem::offset_of!(fd_set, fds_bits) - 0usize];
+};
 unsafe extern "C" {
-    pub fn log_switch_to_syslog();
+    pub fn __darwin_check_fd_set_overflow(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const ::std::os::raw::c_void,
+        arg3: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
-unsafe extern "C" {
-    pub fn log_switch_to_file(path: *const ::std::os::raw::c_char);
-}
-pub const MemoryOperationError_kMemoryOperationSuccess: MemoryOperationError = 0;
-pub const MemoryOperationError_kMemoryOperationError: MemoryOperationError = 1;
-pub const MemoryOperationError_kNotSupportAllocateExecutableMemory: MemoryOperationError = 2;
-pub const MemoryOperationError_kNotEnough: MemoryOperationError = 3;
-pub const MemoryOperationError_kNone: MemoryOperationError = 4;
-pub type MemoryOperationError = ::std::os::raw::c_uint;
-unsafe extern "C" {
-    pub fn CodePatch(
-        address: *mut ::std::os::raw::c_void,
-        buffer: *mut u8,
-        buffer_size: u32,
-    ) -> MemoryOperationError;
-}
+pub type fd_mask = __int32_t;
+pub type pthread_attr_t = __darwin_pthread_attr_t;
+pub type pthread_cond_t = __darwin_pthread_cond_t;
+pub type pthread_condattr_t = __darwin_pthread_condattr_t;
+pub type pthread_mutex_t = __darwin_pthread_mutex_t;
+pub type pthread_mutexattr_t = __darwin_pthread_mutexattr_t;
+pub type pthread_once_t = __darwin_pthread_once_t;
+pub type pthread_rwlock_t = __darwin_pthread_rwlock_t;
+pub type pthread_rwlockattr_t = __darwin_pthread_rwlockattr_t;
+pub type pthread_t = __darwin_pthread_t;
+pub type pthread_key_t = __darwin_pthread_key_t;
+pub type fsblkcnt_t = __darwin_fsblkcnt_t;
+pub type fsfilcnt_t = __darwin_fsfilcnt_t;
 pub type addr_t = usize;
 pub type addr32_t = u32;
 pub type addr64_t = u64;
+pub type asm_func_t = *mut ::std::os::raw::c_void;
 #[repr(C)]
 #[repr(align(16))]
 #[derive(Copy, Clone)]
@@ -420,24 +948,24 @@ pub type FPReg = _FPReg;
 #[repr(C)]
 #[repr(align(16))]
 #[derive(Copy, Clone)]
-pub struct _RegisterContext {
+pub struct DobbyRegisterContext {
     pub dmmpy_0: u64,
     pub sp: u64,
     pub dmmpy_1: u64,
-    pub general: _RegisterContext__bindgen_ty_1,
+    pub general: DobbyRegisterContext__bindgen_ty_1,
     pub fp: u64,
     pub lr: u64,
-    pub floating: _RegisterContext__bindgen_ty_2,
+    pub floating: DobbyRegisterContext__bindgen_ty_2,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
-pub union _RegisterContext__bindgen_ty_1 {
+pub union DobbyRegisterContext__bindgen_ty_1 {
     pub x: [u64; 29usize],
-    pub regs: _RegisterContext__bindgen_ty_1__bindgen_ty_1,
+    pub regs: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct _RegisterContext__bindgen_ty_1__bindgen_ty_1 {
+pub struct DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1 {
     pub x0: u64,
     pub x1: u64,
     pub x2: u64,
@@ -470,91 +998,91 @@ pub struct _RegisterContext__bindgen_ty_1__bindgen_ty_1 {
 }
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of _RegisterContext__bindgen_ty_1__bindgen_ty_1"]
-        [::std::mem::size_of::<_RegisterContext__bindgen_ty_1__bindgen_ty_1>() - 232usize];
-    ["Alignment of _RegisterContext__bindgen_ty_1__bindgen_ty_1"]
-        [::std::mem::align_of::<_RegisterContext__bindgen_ty_1__bindgen_ty_1>() - 8usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x0"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x0) - 0usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x1"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x1) - 8usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x2"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x2) - 16usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x3"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x3) - 24usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x4"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x4) - 32usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x5"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x5) - 40usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x6"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x6) - 48usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x7"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x7) - 56usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x8"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x8) - 64usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x9"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x9) - 72usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x10"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x10) - 80usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x11"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x11) - 88usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x12"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x12) - 96usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x13"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x13) - 104usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x14"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x14) - 112usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x15"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x15) - 120usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x16"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x16) - 128usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x17"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x17) - 136usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x18"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x18) - 144usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x19"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x19) - 152usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x20"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x20) - 160usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x21"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x21) - 168usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x22"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x22) - 176usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x23"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x23) - 184usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x24"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x24) - 192usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x25"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x25) - 200usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x26"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x26) - 208usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x27"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x27) - 216usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1__bindgen_ty_1::x28"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1__bindgen_ty_1, x28) - 224usize];
+    ["Size of DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1"]
+        [::std::mem::size_of::<DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1>() - 232usize];
+    ["Alignment of DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1"]
+        [::std::mem::align_of::<DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1>() - 8usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x0"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x0) - 0usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x1"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x1) - 8usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x2"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x2) - 16usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x3"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x3) - 24usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x4"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x4) - 32usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x5"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x5) - 40usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x6"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x6) - 48usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x7"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x7) - 56usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x8"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x8) - 64usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x9"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x9) - 72usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x10"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x10) - 80usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x11"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x11) - 88usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x12"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x12) - 96usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x13"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x13) - 104usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x14"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x14) - 112usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x15"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x15) - 120usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x16"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x16) - 128usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x17"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x17) - 136usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x18"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x18) - 144usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x19"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x19) - 152usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x20"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x20) - 160usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x21"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x21) - 168usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x22"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x22) - 176usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x23"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x23) - 184usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x24"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x24) - 192usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x25"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x25) - 200usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x26"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x26) - 208usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x27"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x27) - 216usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1::x28"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1__bindgen_ty_1, x28) - 224usize];
 };
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of _RegisterContext__bindgen_ty_1"]
-        [::std::mem::size_of::<_RegisterContext__bindgen_ty_1>() - 232usize];
-    ["Alignment of _RegisterContext__bindgen_ty_1"]
-        [::std::mem::align_of::<_RegisterContext__bindgen_ty_1>() - 8usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1::x"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1, x) - 0usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_1::regs"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_1, regs) - 0usize];
+    ["Size of DobbyRegisterContext__bindgen_ty_1"]
+        [::std::mem::size_of::<DobbyRegisterContext__bindgen_ty_1>() - 232usize];
+    ["Alignment of DobbyRegisterContext__bindgen_ty_1"]
+        [::std::mem::align_of::<DobbyRegisterContext__bindgen_ty_1>() - 8usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1::x"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1, x) - 0usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_1::regs"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_1, regs) - 0usize];
 };
 #[repr(C)]
 #[repr(align(16))]
 #[derive(Copy, Clone)]
-pub union _RegisterContext__bindgen_ty_2 {
+pub union DobbyRegisterContext__bindgen_ty_2 {
     pub q: [FPReg; 32usize],
-    pub regs: _RegisterContext__bindgen_ty_2__bindgen_ty_1,
+    pub regs: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1,
 }
 #[repr(C)]
 #[repr(align(16))]
 #[derive(Copy, Clone)]
-pub struct _RegisterContext__bindgen_ty_2__bindgen_ty_1 {
+pub struct DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1 {
     pub q0: FPReg,
     pub q1: FPReg,
     pub q2: FPReg,
@@ -590,165 +1118,133 @@ pub struct _RegisterContext__bindgen_ty_2__bindgen_ty_1 {
 }
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of _RegisterContext__bindgen_ty_2__bindgen_ty_1"]
-        [::std::mem::size_of::<_RegisterContext__bindgen_ty_2__bindgen_ty_1>() - 512usize];
-    ["Alignment of _RegisterContext__bindgen_ty_2__bindgen_ty_1"]
-        [::std::mem::align_of::<_RegisterContext__bindgen_ty_2__bindgen_ty_1>() - 16usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q0"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q0) - 0usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q1"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q1) - 16usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q2"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q2) - 32usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q3"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q3) - 48usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q4"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q4) - 64usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q5"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q5) - 80usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q6"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q6) - 96usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q7"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q7) - 112usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q8"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q8) - 128usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q9"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q9) - 144usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q10"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q10) - 160usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q11"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q11) - 176usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q12"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q12) - 192usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q13"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q13) - 208usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q14"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q14) - 224usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q15"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q15) - 240usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q16"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q16) - 256usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q17"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q17) - 272usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q18"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q18) - 288usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q19"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q19) - 304usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q20"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q20) - 320usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q21"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q21) - 336usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q22"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q22) - 352usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q23"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q23) - 368usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q24"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q24) - 384usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q25"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q25) - 400usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q26"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q26) - 416usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q27"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q27) - 432usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q28"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q28) - 448usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q29"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q29) - 464usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q30"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q30) - 480usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2__bindgen_ty_1::q31"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2__bindgen_ty_1, q31) - 496usize];
+    ["Size of DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1"]
+        [::std::mem::size_of::<DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1>() - 512usize];
+    ["Alignment of DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1"]
+        [::std::mem::align_of::<DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1>() - 16usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q0"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q0) - 0usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q1"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q1) - 16usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q2"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q2) - 32usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q3"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q3) - 48usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q4"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q4) - 64usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q5"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q5) - 80usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q6"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q6) - 96usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q7"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q7) - 112usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q8"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q8) - 128usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q9"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q9) - 144usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q10"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q10) - 160usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q11"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q11) - 176usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q12"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q12) - 192usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q13"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q13) - 208usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q14"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q14) - 224usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q15"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q15) - 240usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q16"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q16) - 256usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q17"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q17) - 272usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q18"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q18) - 288usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q19"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q19) - 304usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q20"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q20) - 320usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q21"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q21) - 336usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q22"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q22) - 352usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q23"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q23) - 368usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q24"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q24) - 384usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q25"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q25) - 400usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q26"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q26) - 416usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q27"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q27) - 432usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q28"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q28) - 448usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q29"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q29) - 464usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q30"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q30) - 480usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1::q31"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2__bindgen_ty_1, q31) - 496usize];
 };
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of _RegisterContext__bindgen_ty_2"]
-        [::std::mem::size_of::<_RegisterContext__bindgen_ty_2>() - 512usize];
-    ["Alignment of _RegisterContext__bindgen_ty_2"]
-        [::std::mem::align_of::<_RegisterContext__bindgen_ty_2>() - 16usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2::q"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2, q) - 0usize];
-    ["Offset of field: _RegisterContext__bindgen_ty_2::regs"]
-        [::std::mem::offset_of!(_RegisterContext__bindgen_ty_2, regs) - 0usize];
+    ["Size of DobbyRegisterContext__bindgen_ty_2"]
+        [::std::mem::size_of::<DobbyRegisterContext__bindgen_ty_2>() - 512usize];
+    ["Alignment of DobbyRegisterContext__bindgen_ty_2"]
+        [::std::mem::align_of::<DobbyRegisterContext__bindgen_ty_2>() - 16usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2::q"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2, q) - 0usize];
+    ["Offset of field: DobbyRegisterContext__bindgen_ty_2::regs"]
+        [::std::mem::offset_of!(DobbyRegisterContext__bindgen_ty_2, regs) - 0usize];
 };
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of _RegisterContext"][::std::mem::size_of::<_RegisterContext>() - 784usize];
-    ["Alignment of _RegisterContext"][::std::mem::align_of::<_RegisterContext>() - 16usize];
-    ["Offset of field: _RegisterContext::dmmpy_0"]
-        [::std::mem::offset_of!(_RegisterContext, dmmpy_0) - 0usize];
-    ["Offset of field: _RegisterContext::sp"]
-        [::std::mem::offset_of!(_RegisterContext, sp) - 8usize];
-    ["Offset of field: _RegisterContext::dmmpy_1"]
-        [::std::mem::offset_of!(_RegisterContext, dmmpy_1) - 16usize];
-    ["Offset of field: _RegisterContext::general"]
-        [::std::mem::offset_of!(_RegisterContext, general) - 24usize];
-    ["Offset of field: _RegisterContext::fp"]
-        [::std::mem::offset_of!(_RegisterContext, fp) - 256usize];
-    ["Offset of field: _RegisterContext::lr"]
-        [::std::mem::offset_of!(_RegisterContext, lr) - 264usize];
-    ["Offset of field: _RegisterContext::floating"]
-        [::std::mem::offset_of!(_RegisterContext, floating) - 272usize];
+    ["Size of DobbyRegisterContext"][::std::mem::size_of::<DobbyRegisterContext>() - 784usize];
+    ["Alignment of DobbyRegisterContext"][::std::mem::align_of::<DobbyRegisterContext>() - 16usize];
+    ["Offset of field: DobbyRegisterContext::dmmpy_0"]
+        [::std::mem::offset_of!(DobbyRegisterContext, dmmpy_0) - 0usize];
+    ["Offset of field: DobbyRegisterContext::sp"]
+        [::std::mem::offset_of!(DobbyRegisterContext, sp) - 8usize];
+    ["Offset of field: DobbyRegisterContext::dmmpy_1"]
+        [::std::mem::offset_of!(DobbyRegisterContext, dmmpy_1) - 16usize];
+    ["Offset of field: DobbyRegisterContext::general"]
+        [::std::mem::offset_of!(DobbyRegisterContext, general) - 24usize];
+    ["Offset of field: DobbyRegisterContext::fp"]
+        [::std::mem::offset_of!(DobbyRegisterContext, fp) - 256usize];
+    ["Offset of field: DobbyRegisterContext::lr"]
+        [::std::mem::offset_of!(DobbyRegisterContext, lr) - 264usize];
+    ["Offset of field: DobbyRegisterContext::floating"]
+        [::std::mem::offset_of!(DobbyRegisterContext, floating) - 272usize];
 };
-pub type RegisterContext = _RegisterContext;
-pub const _RetStatus_RS_FAILED: _RetStatus = -1;
-pub const _RetStatus_RS_SUCCESS: _RetStatus = 0;
-pub type _RetStatus = ::std::os::raw::c_int;
-pub use self::_RetStatus as RetStatus;
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct _HookEntryInfo {
-    pub hook_id: ::std::os::raw::c_int,
-    pub __bindgen_anon_1: _HookEntryInfo__bindgen_ty_1,
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub union _HookEntryInfo__bindgen_ty_1 {
-    pub target_address: *mut ::std::os::raw::c_void,
-    pub function_address: *mut ::std::os::raw::c_void,
-    pub instruction_address: *mut ::std::os::raw::c_void,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _HookEntryInfo__bindgen_ty_1"]
-        [::std::mem::size_of::<_HookEntryInfo__bindgen_ty_1>() - 8usize];
-    ["Alignment of _HookEntryInfo__bindgen_ty_1"]
-        [::std::mem::align_of::<_HookEntryInfo__bindgen_ty_1>() - 8usize];
-    ["Offset of field: _HookEntryInfo__bindgen_ty_1::target_address"]
-        [::std::mem::offset_of!(_HookEntryInfo__bindgen_ty_1, target_address) - 0usize];
-    ["Offset of field: _HookEntryInfo__bindgen_ty_1::function_address"]
-        [::std::mem::offset_of!(_HookEntryInfo__bindgen_ty_1, function_address) - 0usize];
-    ["Offset of field: _HookEntryInfo__bindgen_ty_1::instruction_address"]
-        [::std::mem::offset_of!(_HookEntryInfo__bindgen_ty_1, instruction_address) - 0usize];
-};
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _HookEntryInfo"][::std::mem::size_of::<_HookEntryInfo>() - 16usize];
-    ["Alignment of _HookEntryInfo"][::std::mem::align_of::<_HookEntryInfo>() - 8usize];
-    ["Offset of field: _HookEntryInfo::hook_id"]
-        [::std::mem::offset_of!(_HookEntryInfo, hook_id) - 0usize];
-};
-pub type HookEntryInfo = _HookEntryInfo;
 unsafe extern "C" {
-    pub fn DobbyBuildVersion() -> *const ::std::os::raw::c_char;
+    pub fn DobbyCodePatch(
+        address: *mut ::std::os::raw::c_void,
+        buffer: *mut u8,
+        buffer_size: u32,
+    ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn DobbyHook(
         address: *mut ::std::os::raw::c_void,
-        replace_call: *mut ::std::os::raw::c_void,
-        origin_call: *mut *mut ::std::os::raw::c_void,
+        fake_func: *mut ::std::os::raw::c_void,
+        out_origin_func: *mut *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
-pub type DBICallTy = ::std::option::Option<
-    unsafe extern "C" fn(ctx: *mut RegisterContext, info: *const HookEntryInfo),
+pub type dobby_instrument_callback_t = ::std::option::Option<
+    unsafe extern "C" fn(address: *mut ::std::os::raw::c_void, ctx: *mut DobbyRegisterContext),
 >;
 unsafe extern "C" {
     pub fn DobbyInstrument(
         address: *mut ::std::os::raw::c_void,
-        dbi_call: DBICallTy,
+        pre_handler: dobby_instrument_callback_t,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn DobbyDestroy(address: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn DobbyGetVersion() -> *const ::std::os::raw::c_char;
 }
 unsafe extern "C" {
     pub fn DobbySymbolResolver(
@@ -757,7 +1253,7 @@ unsafe extern "C" {
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
-    pub fn DobbyGlobalOffsetTableReplace(
+    pub fn DobbyImportTableReplace(
         image_name: *mut ::std::os::raw::c_char,
         symbol_name: *mut ::std::os::raw::c_char,
         fake_func: *mut ::std::os::raw::c_void,
@@ -765,19 +1261,18 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn dobby_enable_near_branch_trampoline();
+    pub fn dobby_set_near_trampoline(enable: bool);
+}
+pub type dobby_alloc_near_code_callback_t =
+    ::std::option::Option<unsafe extern "C" fn(size: u32, pos: addr_t, range: usize) -> addr_t>;
+unsafe extern "C" {
+    pub fn dobby_register_alloc_near_code_callback(handler: dobby_alloc_near_code_callback_t);
 }
 unsafe extern "C" {
-    pub fn dobby_disable_near_branch_trampoline();
-}
-pub type linker_load_callback_t = ::std::option::Option<
-    unsafe extern "C" fn(
-        image_name: *const ::std::os::raw::c_char,
-        handle: *mut ::std::os::raw::c_void,
-    ),
->;
-unsafe extern "C" {
-    pub fn dobby_register_image_load_callback(func: linker_load_callback_t);
+    pub fn dobby_set_options(
+        enable_near_trampoline: bool,
+        alloc_near_code_callback: dobby_alloc_near_code_callback_t,
+    );
 }
 pub type __builtin_va_list = *mut ::std::os::raw::c_char;
 pub type _FPReg___int128_t = i128;
