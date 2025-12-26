@@ -35,7 +35,7 @@ pub const MemoryOperationError_kNotEnough: MemoryOperationError = 3;
 pub const MemoryOperationError_kNone: MemoryOperationError = 4;
 pub type MemoryOperationError = ::std::os::raw::c_uint;
 extern "C" {
-    pub fn CodePatch(
+    pub fn DobbyCodePatch(
         address: *mut ::std::os::raw::c_void,
         buffer: *mut ::std::os::raw::c_uchar,
         buffer_size: ::std::os::raw::c_uint,
